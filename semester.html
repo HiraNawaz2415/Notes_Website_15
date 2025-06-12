@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Semester Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">📚 Notes Portal</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <h2 id="semester-title">Semester Notes</h2>
+    <div id="subjects-container"></div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Notes Portal. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const data = {
+      1: [
+        { name: "Programming Fundamentals", folder: "pf" },
+        { name: "IT", folder: "it" },
+        { name: "Functional English", folder: "english" },
+        { name: "Islamiat", folder: "isl" },
+        { name: "Calculus", folder: "calculus" },
+        { name: "Applied Physics", folder: "physics" },
+      ],
+      2: [
+        { name: "OOP", folder: "oop" },
+        { name: "Discrete Structures", folder: "discrete" },
+        { name: "DLD", folder: "dld" },
+        { name: "Statistics", folder: "statistics" },
+        { name: "Communication Skills", folder: "communication" },
+      ],
+      3: [
+        { name: "Assembly Language", folder: "assembly" },
+        { name: "Data Structure", folder: "ds" },
+        { name: "Computer Networking", folder: "networking" },
+        { name: "Academic Writing", folder: "writing" },
+        { name: "Principles of Management", folder: "pom" },
+        { name: "Pakistan Studies", folder: "pakstudy" },
+      ],
+      4: [
+        { name: "Database Systems", folder: "dbms" },
+        { name: "Human Resource Management (HRM)", folder: "hrm" },
+        { name: "Software Engineering", folder: "se" },
+        { name: "Linear Algebra", folder: "algebra" },
+        { name: "Design and Analysis of Algorithms (DAA)", folder: "daa" },
+      ],
+      5: [
+        { name: "Web Development", folder: "webdev" },
+        { name: "OOAD", folder: "ooad" },
+        { name: "Multimedia Systems", folder: "multimedia" },
+        { name: "Theory of Automata", folder: "automata" },
+        { name: "Operating Systems", folder: "os" },
+        { name: "Multivariable Calculus", folder: "mvc" },
+      ],
+      6: [
+        { name: "Information Security", folder: "security" },
+        { name: "Parallel & Distributed Computing (PDC)", folder: "pdc" },
+        { name: "Artificial Intelligence (AI)", folder: "ai" },
+        { name: "Compiler Construction", folder: "compiler" },
+        { name: "Mobile Application Development", folder: "mad" },
+      ],
+      7: [
+        { name: "Capstone Project 1", folder: "capstone1" },
+        { name: "Entrepreneurship", folder: "entrepreneurship" },
+        { name: "Database Administration & Management (DBAM)", folder: "dbam" },
+        { name: "Data Mining", folder: "datamining" },
+      ],
+      8: [
+        { name: "Capstone Project 2", folder: "capstone2" },
+        { name: "Professional Practices", folder: "professional" },
+        { name: "Data Warehouse", folder: "dw" },
+        { name: "Financial Accounting", folder: "accounting" },
+      ]
+    };
+  
+    const params = new URLSearchParams(window.location.search);
+    const sem = params.get('sem');
+    const title = document.getElementById('semester-title');
+    const container = document.getElementById('subjects-container');
+  
+    if (sem && data[sem]) {
+      title.textContent = `Semester ${sem} Notes`;
+  
+      data[sem].forEach(subject => {
+        const div = document.createElement('div');
+        div.className = 'subject';
+        div.innerHTML = `
+        <div class="subject-card">
+  <h3 class="subject-title">${subject.name}</h3>
+  <ul class="resource-list">
+    <li><a href="notes/sem${sem}/${subject.folder}/book.pdf" class="resource-link" download>📘 Book</a></li>
+    <li><a href="notes/sem${sem}/${subject.folder}/assignments.pdf" class="resource-link" download>📝 Assignments</a></li>
+    <li><a href="notes/sem${sem}/${subject.folder}/papers.pdf" class="resource-link" download>📄 Past Papers</a></li>
+    <li><a href="notes/sem${sem}/${subject.folder}/aest.pdf" class="resource-link" download>📊 AEST</a></li>
+  </ul>
+</div>
+        `;
+        container.appendChild(div);
+      });
+    } else {
+      title.textContent = "Invalid Semester Selected!";
+    }
+  </script>
+  
+</body>
+</html>
