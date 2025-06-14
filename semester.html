@@ -30,33 +30,230 @@
   </footer>
 
   <script>
-    const data = {
-      5: [
-        {
-          name: "Theory of Automata",
-          folder: "automata",
-          files: ["book.pdf", "assignments.pdf", "papers.pdf", "aest.pdf", "unit1.pdf"]
-        },
-        {
-          name: "Operating Systems",
-          folder: "os",
-          files: ["book.pdf", "deadlock.pdf"]
-        },
-        {
-          name: "Web Development",
-          folder: "webdev",
-          files: ["book.pdf", "assignments.pdf"]
-        }
-      ],
-      6: [
-        {
-          name: "Artificial Intelligence",
-          folder: "ai",
-          files: ["book.pdf", "quiz1.pdf", "assignment1.pdf"]
-        }
-      ]
-      // Add other semesters in same format
-    };
+  const data = {
+  1: [
+    {
+      name: "Programming Fundamentals",
+      folder: "pf",
+      files: ["book.pdf", "assignments.pdf", "quiz.pdf"]
+    },
+    {
+      name: "IT",
+      folder: "it",
+      files: ["book.pdf", "labmanual.pdf"]
+    },
+    {
+      name: "Functional English",
+      folder: "english",
+      files: ["book.pdf", "notes.pdf"]
+    },
+    {
+      name: "Islamiat",
+      folder: "isl",
+      files: ["book.pdf", "mcqs.pdf"]
+    },
+    {
+      name: "Calculus",
+      folder: "calculus",
+      files: ["book.pdf", "examples.pdf"]
+    },
+    {
+      name: "Applied Physics",
+      folder: "physics",
+      files: ["book.pdf", "numericals.pdf"]
+    }
+  ],
+  2: [
+    {
+      name: "OOP",
+      folder: "oop",
+      files: ["book.pdf", "assignments.pdf"]
+    },
+    {
+      name: "Discrete Structures",
+      folder: "discrete",
+      files: ["book.pdf", "shortquestions.pdf"]
+    },
+    {
+      name: "DLD",
+      folder: "dld",
+      files: ["book.pdf", "truthTables.pdf"]
+    },
+    {
+      name: "Statistics",
+      folder: "statistics",
+      files: ["book.pdf", "formulas.pdf"]
+    },
+    {
+      name: "Communication Skills",
+      folder: "communication",
+      files: ["book.pdf", "presentationTips.pdf"]
+    }
+  ],
+  3: [
+    {
+      name: "Assembly Language",
+      folder: "assembly",
+      files: ["book.pdf", "instructions.pdf"]
+    },
+    {
+      name: "Data Structure",
+      folder: "ds",
+      files: ["book.pdf", "codes.pdf"]
+    },
+    {
+      name: "Computer Networking",
+      folder: "networking",
+      files: ["book.pdf", "protocols.pdf"]
+    },
+    {
+      name: "Academic Writing",
+      folder: "writing",
+      files: ["book.pdf", "guidelines.pdf"]
+    },
+    {
+      name: "Principles of Management",
+      folder: "pom",
+      files: ["book.pdf", "caseStudies.pdf"]
+    },
+    {
+      name: "Pakistan Studies",
+      folder: "pakstudy",
+      files: ["book.pdf", "notes.pdf"]
+    }
+  ],
+  4: [
+    {
+      name: "Database Systems",
+      folder: "dbms",
+      files: ["book.pdf", "queries.pdf"]
+    },
+    {
+      name: "Human Resource Management",
+      folder: "hrm",
+      files: ["book.pdf", "notes.pdf"]
+    },
+    {
+      name: "Software Engineering",
+      folder: "se",
+      files: ["book.pdf", "models.pdf"]
+    },
+    {
+      name: "Linear Algebra",
+      folder: "algebra",
+      files: ["book.pdf", "matrices.pdf"]
+    },
+    {
+      name: "Design and Analysis of Algorithms",
+      folder: "daa",
+      files: ["book.pdf", "complexity.pdf"]
+    }
+  ],
+  5: [
+    {
+      name: "Web Development",
+      folder: "webdev",
+      files: ["book.pdf", "html-css.pdf", "js-basics.pdf"]
+    },
+    {
+      name: "OOAD",
+      folder: "ooad",
+      files: ["book.pdf", "uml.pdf"]
+    },
+    {
+      name: "Multimedia Systems",
+      folder: "multimedia",
+      files: ["book.pdf", "slides.pdf"]
+    },
+    {
+      name: "Theory of Automata",
+      folder: "automata",
+      files: ["book.pdf", "dfa.pdf", "nfa.pdf"]
+    },
+    {
+      name: "Operating Systems",
+      folder: "os",
+      files: ["book.pdf", "deadlocks.pdf"]
+    },
+    {
+      name: "Multivariable Calculus",
+      folder: "mvc",
+      files: ["book.pdf", "examples.pdf"]
+    }
+  ],
+  6: [
+    {
+      name: "Information Security",
+      folder: "security",
+      files: ["book.pdf", "attacks.pdf"]
+    },
+    {
+      name: "Parallel & Distributed Computing",
+      folder: "pdc",
+      files: ["book.pdf", "parallelism.pdf"]
+    },
+    {
+      name: "Artificial Intelligence",
+      folder: "ai",
+      files: ["book.pdf", "agents.pdf"]
+    },
+    {
+      name: "Compiler Construction",
+      folder: "compiler",
+      files: ["book.pdf", "lexicalAnalysis.pdf"]
+    },
+    {
+      name: "Mobile Application Development",
+      folder: "mad",
+      files: ["book.pdf", "androidIntro.pdf"]
+    }
+  ],
+  7: [
+    {
+      name: "Capstone Project 1",
+      folder: "capstone1",
+      files: ["proposal.pdf", "ppt.pdf"]
+    },
+    {
+      name: "Entrepreneurship",
+      folder: "entrepreneurship",
+      files: ["book.pdf", "caseStudies.pdf"]
+    },
+    {
+      name: "Database Administration & Management",
+      folder: "dbam",
+      files: ["book.pdf", "security.pdf"]
+    },
+    {
+      name: "Data Mining",
+      folder: "datamining",
+      files: ["book.pdf", "techniques.pdf"]
+    }
+  ],
+  8: [
+    {
+      name: "Capstone Project 2",
+      folder: "capstone2",
+      files: ["report.pdf", "defenseSlides.pdf"]
+    },
+    {
+      name: "Professional Practices",
+      folder: "professional",
+      files: ["book.pdf", "ethics.pdf"]
+    },
+    {
+      name: "Data Warehouse",
+      folder: "dw",
+      files: ["book.pdf", "starSchema.pdf"]
+    },
+    {
+      name: "Financial Accounting",
+      folder: "accounting",
+      files: ["book.pdf", "statements.pdf"]
+    }
+  ]
+};
+
 
     const params = new URLSearchParams(window.location.search);
     const sem = params.get('sem');
