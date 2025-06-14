@@ -255,36 +255,38 @@
 };
 
 
-    const params = new URLSearchParams(window.location.search);
-    const sem = params.get('sem');
-    const title = document.getElementById('semester-title');
-    const container = document.getElementById('subjects-container');
+const params = new URLSearchParams(window.location.search);
+  const sem = params.get('sem');
+  const title = document.getElementById('semester-title');
+  const container = document.getElementById('subjects-container');
 
-    if (sem && data[sem]) {
-      title.textContent = `Semester ${sem} Notes`;
+  if (sem && data[sem]) {
+    title.textContent = `Semester ${sem} Notes`;
 
-      data[sem].forEach(subject => {
-        const div = document.createElement('div');
-        div.className = 'subject';
-        div.innerHTML = `
-          <div class="subject-card">
-            <h3 class="subject-title">${subject.name}</h3>
-            <ul class="resource-list">
-              ${subject.files.map(file => `
-                <li>
-                  <a href="notes/sem${sem}/${subject.folder}/${file}" class="resource-link" download>
-                    📄 ${file}
-                  </a>
-                </li>
-              `).join('')}
-            </ul>
-          </div>
-        `;
-        container.appendChild(div);
-      });
-    } else {
-      title.textContent = "Invalid Semester Selected!";
-    }
+    data[sem].forEach(subject => {
+      const div = document.createElement('div');
+      div.className = 'subject';
+
+      div.innerHTML = `
+        <div class="subject-card">
+          <h3 class="subject-title">${subject.name}</h3>
+          <ul class="resource-list">
+            ${subject.files.map(file => `
+              <li>
+                <a href="Notes/SEM${sem}/${subject.folder}/${file}" class="resource-link" download>
+                  📄 ${file}
+                </a>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+      `;
+
+      container.appendChild(div);
+    });
+  } else {
+    title.textContent = "Invalid Semester Selected!";
+  }
   </script>
 </body>
 </html>
