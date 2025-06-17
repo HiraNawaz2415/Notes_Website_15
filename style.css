@@ -353,8 +353,10 @@ body {
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    order: 2; /* Ensures it's placed to the right */
+    font-size: 1.8rem;
+    color: white;
     margin-left: auto;
+    cursor: pointer;
   }
 
   .nav-links {
