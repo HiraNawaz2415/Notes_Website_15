@@ -324,36 +324,6 @@ body {
     flex: 1;
   }
 
-  .menu-toggle {
-    display: block;
-    font-size: 1.8rem;
-    color: white;
-    margin-left: auto;
-    cursor: pointer;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #006666;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 999;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    text-align: center;
-    padding: 1rem 0;
-  }
-}
-
-
 /* Responsive Settings */
 @media (max-width: 768px) {
   .menu-toggle {
@@ -386,29 +356,4 @@ body {
 }
 
 
-/* ===== Optional Dark Mode Support ===== */
-body.dark-mode {
-  background-color: #121212;
-  color: #f0f0f0;
-}
 
-body.dark-mode .navbar,
-body.dark-mode .footer,
-body.dark-mode .social-icons a {
-  background-color: #1e1e1e;
-  color: #ccc;
-}
-
-body.dark-mode .subject-card {
-  background: linear-gradient(135deg, #ff758c, #ff7eb3); /* pink gradient */
-}
-
-body.dark-mode .resource-link {
-  background-color: #333;
-  color: #fff;
-}
-
-body.dark-mode .resource-link:hover {
-  background-color: #555;
-  color: #fff;
-}
