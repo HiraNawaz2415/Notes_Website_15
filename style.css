@@ -8,6 +8,11 @@
 html {
   scroll-behavior: smooth;
 }
+.menu-toggle,
+.menu-toggle * {
+  color: white !important;
+}
+
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
