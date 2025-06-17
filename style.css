@@ -298,27 +298,49 @@ body {
     padding: 0 10px;
   }
 }
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  flex: 1;
+}
+
+/* Hamburger Icon */
 .menu-toggle {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   cursor: pointer;
   color: white;
 }
 
-/* Show hamburger icon and hide nav links on mobile */
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+/* Responsive Settings */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    order: 2; /* Ensures it's placed to the right */
+    margin-left: auto;
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #008b8b;
     width: 100%;
+    background-color: #006666;
     position: absolute;
     top: 100%;
     left: 0;
+    z-index: 999;
   }
 
   .nav-links.active {
@@ -326,11 +348,11 @@ body {
   }
 
   .nav-links li {
-    width: 100%;
     text-align: center;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
   }
 }
+
 
 /* ===== Optional Dark Mode Support ===== */
 body.dark-mode {
