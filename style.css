@@ -330,14 +330,24 @@ body {
   cursor: pointer;
 }
 
-/* Show hamburger icon on mobile only */
-@media (max-width: 768px) {
+
+ @media (max-width: 768px) {
+  .container {
+    flex-direction: row; /* keep row so items stay side-by-side */
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .menu-toggle {
-    display: block; /* Show on small screens */
+    display: block;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    margin-left: auto; /* Push to the right */
   }
 
   .nav-links {
-    display: none; /* Hide menu by default on mobile */
+    display: none;
     flex-direction: column;
     background-color: #006666;
     position: absolute;
@@ -356,5 +366,6 @@ body {
     padding: 1rem 0;
   }
 }
+
 
 
