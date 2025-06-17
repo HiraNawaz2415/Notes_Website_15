@@ -30,3 +30,11 @@ if (mockNotes[sem]) {
 } else {
   notesList.innerHTML = `<li class="no-notes">No notes available yet for Semester ${sem}.</li>`;
 }
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  });
