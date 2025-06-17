@@ -323,23 +323,27 @@ body {
   .logo {
     flex: 1;
   }
+.menu-toggle {
+  display: none; /* Hidden by default */
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
 
+/* Show hamburger icon on mobile only */
+@media (max-width: 768px) {
   .menu-toggle {
-    display: block;
-    font-size: 1.8rem;
-    color: white;
-    margin-left: auto;
-    cursor: pointer;
+    display: block; /* Show on small screens */
   }
 
   .nav-links {
-    display: none;
+    display: none; /* Hide menu by default on mobile */
     flex-direction: column;
-    width: 100%;
     background-color: #006666;
     position: absolute;
     top: 100%;
     left: 0;
+    width: 100%;
     z-index: 999;
   }
 
@@ -352,38 +356,5 @@ body {
     padding: 1rem 0;
   }
 }
-
-
-/* Responsive Settings */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-    font-size: 1.8rem;
-    color: white;
-    margin-left: auto;
-    cursor: pointer;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #006666;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 999;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    text-align: left;
-    padding: 1rem 0;
-  }
-}
-
 
 
