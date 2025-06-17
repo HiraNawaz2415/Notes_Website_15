@@ -11,21 +11,16 @@
   <header class="navbar">
     <div class="container">
       <h1 class="logo">📚 Notes Portal</h1>
-     <!-- Navigation Bar -->
-<nav class="navbar">
-  <div class="container">
-    <div class="logo">Your Logo</div>
-    
-    <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- Hamburger Icon -->
 
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-     
+      <!-- Hamburger Icon -->
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
   </header>
 
@@ -43,18 +38,9 @@
     </div>
 
     <section id="about" class="about-section">
-        <h2>About Notes Portal</h2>
-        <p>
-          <strong>Notes Portal</strong> is a simple and efficient semester-wise platform designed to help students access and download academic notes for free. Whether you are studying Computer Science, Business, or Arts, we aim to make your learning journey smoother.
-        </p>
-        <p style="margin-top: 1rem;">
-          <strong>Especially for UOS Students:</strong> This portal is tailored to match the curriculum and syllabus of the <em>University of Sargodha</em>. All notes are organized semester-wise to help you find what you need quickly and efficiently.
-        </p>
-        <p style="margin-top: 1rem;">
-          Built with ❤️ using HTML, CSS, and JavaScript. Hosted freely on GitHub and Netlify—no database required.
-        </p>
-      </section>
-      
+      <h2>About Notes Portal</h2>
+      <p><strong>Notes Portal</strong> is a simple and efficient semester-wise platform...</p>
+    </section>
 
     <section id="contact" class="contact-section">
       <h2>Contact Us</h2>
@@ -69,23 +55,24 @@
 
   <footer class="footer">
     <div class="social-icons">
-      <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
     </div>
     <p>&copy; 2025 Notes Portal. All rights reserved.</p>
   </footer>
-</body>
+
+  <!-- Hamburger Menu Script -->
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
 
-    toggle.addEventListener("click", function () {
-      navLinks.classList.toggle("active");
+      toggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+      });
     });
-  });
-</script>
-
+  </script>
+</body>
 </html>
