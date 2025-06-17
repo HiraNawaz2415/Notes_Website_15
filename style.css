@@ -324,6 +324,36 @@ body {
     flex: 1;
   }
 
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    color: white;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #006666;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+
+
 /* Responsive Settings */
 @media (max-width: 768px) {
   .menu-toggle {
