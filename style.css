@@ -298,6 +298,39 @@ body {
     padding: 0 10px;
   }
 }
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Show hamburger icon and hide nav links on mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #008b8b;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+}
 
 /* ===== Optional Dark Mode Support ===== */
 body.dark-mode {
