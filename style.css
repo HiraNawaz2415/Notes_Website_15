@@ -123,23 +123,37 @@ body {
 /* ===== About Section ===== */
 .about-section {
   padding: 3rem 1rem;
-  background-color: #ffffff;
+  background-color: #f4f7fc;
   text-align: center;
 }
 
-.about-section h2 {
+.about-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 2rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+.about-card h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #408e82;
 }
 
-.about-section p {
-  max-width: 700px;
-  margin: 0 auto;
+.about-card p {
   font-size: 1.1rem;
   color: #555;
   line-height: 1.7;
 }
+
 
 /* ===== Subject Cards ===== */
 .subject-list {
