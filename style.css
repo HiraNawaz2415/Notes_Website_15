@@ -8,10 +8,12 @@
 html {
   scroll-behavior: smooth;
 }
+
 .menu-toggle,
 .menu-toggle * {
   color: white !important;
 }
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f7fc;
@@ -38,11 +40,13 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  flex: 1;
 }
 
 .nav-links {
@@ -59,13 +63,10 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-.nav-links li a.active {
+.nav-links li a.active,
+.nav-links li a:hover {
   background: linear-gradient(135deg, #87a96b, #008b8b);
   color: white;
-}
-.nav-links li a:hover
-{
-  background: linear-gradient(135deg, #87a96b, #008b8b); 
 }
 
 /* ===== Main Content ===== */
@@ -103,6 +104,9 @@ body {
   transform: scale(1.05);
 }
 
+.semester-link.active {
+  box-shadow: 0 0 0 3px #87a96b66;
+}
 
 /* ===== About Section ===== */
 .about-section {
@@ -134,7 +138,7 @@ body {
 }
 
 .subject-card {
-  background: linear-gradient(135deg, #87a96b, #008b8b); /* Teal gradient */
+  background: linear-gradient(135deg, #87a96b, #008b8b);
   backdrop-filter: blur(10px);
   border-radius: 12px;
   padding: 20px;
@@ -211,6 +215,7 @@ body {
   width: 100%;
   transition: border 0.3s;
 }
+
 .contact-form button {
   padding: 0.8rem;
   background: linear-gradient(135deg, #87a96b, #008b8b);
@@ -236,7 +241,6 @@ body {
 
 .social-icons a {
   color: white;
-  background-color:;
   padding: 0.6rem;
   font-size: 1.2rem;
   border-radius: 50%;
@@ -244,19 +248,16 @@ body {
 }
 
 .social-icons a:hover {
-  background:linear-gradient(135deg, #87a96b, #008b8b);
+  background: linear-gradient(135deg, #87a96b, #008b8b);
 }
 
 /* ===== Footer ===== */
 .footer {
-  background-color: #408e82; 
+  background-color: #408e82;
   color: #ccc;
   text-align: center;
   padding: 1rem 0;
   margin-top: 4rem;
-}
-.semester-link.active {
-  box-shadow: 0 0 0 3px #87a96b66;
 }
 
 /* ===== Animations ===== */
@@ -274,72 +275,14 @@ body {
 
 /* ===== Responsive Fixes ===== */
 @media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 1rem;
-  }
-
   .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .main-content h2,
-  .about-section h2,
-  .contact-section h2 {
-    font-size: 1.5rem;
-  }
-
-  .semester-link {
-    font-size: 0.95rem;
-    padding: 0.8rem 1.2rem;
-  }
-
-  .contact-form {
-    width: 100%;
-    padding: 0 10px;
-  }
-}
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
-
-.logo {
-  flex: 1;
-}
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: row; /* change from column to row */
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
 
   .logo {
     flex: 1;
-  }
-.menu-toggle {
-  display: none; /* Hidden by default */
-  font-size: 1.8rem;
-  color: white;
-  cursor: pointer;
-}
-
-  .menu-toggle {
-  display: none; /* Hidden by default */
-  font-size: 1.8rem;
-  color: white;
-  cursor: pointer;
-
-
- @media (max-width: 768px) {
-  .container {
-    flex-direction: row; /* keep row so items stay side-by-side */
-    align-items: center;
-    justify-content: space-between;
   }
 
   .menu-toggle {
@@ -347,7 +290,7 @@ body {
     font-size: 1.8rem;
     color: white;
     cursor: pointer;
-    margin-left: auto; /* Push to the right */
+    margin-left: auto;
   }
 
   .nav-links {
@@ -369,7 +312,20 @@ body {
     text-align: center;
     padding: 1rem 0;
   }
+
+  .main-content h2,
+  .about-section h2,
+  .contact-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .semester-link {
+    font-size: 0.95rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 0 10px;
+  }
 }
-
-
-
