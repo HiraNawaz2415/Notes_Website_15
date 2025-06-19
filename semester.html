@@ -143,20 +143,21 @@
         const randomClass = gradientClasses[Math.floor(Math.random() * gradientClasses.length)];
 
         div.className = `subject ${randomClass}`;
-        div.innerHTML = `
-          <div class="subject-card">
-            <h3 class="subject-title">${subject.name}</h3>
-            <ul class="resource-list">
-              ${subject.files.map(file => `
-                <li>
-                  <a href="Notes/SEM${sem}/${subject.folder}/${file}" class="resource-link" download>
-                    📄 ${file}
-                  </a>
-                </li>
-              `).join('')}
-            </ul>
-          </div>
-        `;
+   div.innerHTML = `
+  <div class="subject-card">
+    <h3 class="subject-title">${subject.name}</h3>
+    <ul class="resource-list">
+      ${subject.files.map(file => `
+        <li>
+          <a href="Notes/SEM${sem}/${subject.folder}/${encodeURIComponent(file)}" class="resource-link" download>
+            📄 ${file}
+          </a>
+        </li>
+      `).join('')}
+    </ul>
+  </div>
+`;
+
 
         container.appendChild(div);
       });
