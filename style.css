@@ -449,3 +449,47 @@ body {
   right: 10px;
 }
 
+
+
+/* Ensure nav menu is hidden in mobile by default */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+/* Style for social icons inside nav */
+.nav-links .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nav-links .social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.nav-links .social-icons a:hover {
+  color: #00aced;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-links .social-icons {
+    margin-left: auto;
+  }
+}
+
