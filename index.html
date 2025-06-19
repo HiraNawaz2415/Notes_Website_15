@@ -8,15 +8,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
 <header class="navbar">
   <div class="container">
     <h1 class="logo">📚 Notes Portal</h1>
-
-      <!-- Hamburger Icon for Mobile Only -->
-<div class="menu-toggle" id="menu-toggle">
-  <i class="fas fa-bars"></i>
-</div>
-    <!-- Navigation Links -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
     <ul class="nav-links" id="nav-links">
       <li><a href="#" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -25,129 +23,79 @@
   </div>
 </header>
 
-
-
-  <main class="main-content">
-    <h2>Select Your Semester</h2>
-    <div class="semester-list">
-      <a href="semester.html?sem=1" class="semester-link">Semester 1</a>
-      <a href="semester.html?sem=2" class="semester-link">Semester 2</a>
-      <a href="semester.html?sem=3" class="semester-link">Semester 3</a>
-      <a href="semester.html?sem=4" class="semester-link">Semester 4</a>
-      <a href="semester.html?sem=5" class="semester-link">Semester 5</a>
-      <a href="semester.html?sem=6" class="semester-link">Semester 6</a>
-      <a href="semester.html?sem=7" class="semester-link">Semester 7</a>
-      <a href="semester.html?sem=8" class="semester-link">Semester 8</a>
-    </div>
-
-   <section id="about" class="about-section">
-  <div class="about-card">
-    <h2>About Notes Portal</h2>
-    <p>
-      <strong>Notes Portal</strong> is a simple and efficient semester-wise platform...
-    </p>
+<main class="main-content">
+  <h2>Select Your Semester</h2>
+  <div class="semester-list">
+    <a href="semester.html?sem=1" class="semester-link">Semester 1</a>
+    <a href="semester.html?sem=2" class="semester-link">Semester 2</a>
+    <a href="semester.html?sem=3" class="semester-link">Semester 3</a>
+    <a href="semester.html?sem=4" class="semester-link">Semester 4</a>
+    <a href="semester.html?sem=5" class="semester-link">Semester 5</a>
+    <a href="semester.html?sem=6" class="semester-link">Semester 6</a>
+    <a href="semester.html?sem=7" class="semester-link">Semester 7</a>
+    <a href="semester.html?sem=8" class="semester-link">Semester 8</a>
   </div>
-</section>
 
-    <!-- Image Slider Section -->
-<section class="slider-section">
-  <h2>📘 Other Course Notes</h2>
-  <div class="slider-container">
-    <div class="slider">
-      <div class="slide">
-        <a href="Notes/python.pdf">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
-        <p>Python</p>
-
-        </a>
-      </div>
-      <div class="slide">
-        <a href="Notes/web-scraping.pdf">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Web_scraping_with_Python_using_Beautiful_Soup.svg/512px-Web_scraping_with_Python_using_Beautiful_Soup.svg.png" alt="Web Scraping">
-        <p>Web Scraping</p>
-        </a>
-      </div>
-      <div class="slide">
-        <a href="Notes/matplotlib.pdf">
-        <img src="https://matplotlib.org/stable/_static/logo2_compressed.svg" alt="Matplotlib">
-        <p>Matplotlib</p>
-        </a>
-      </div>
-      <div class="slide">
-        <a href="Notes/seaborn.pdf">
-        <img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="Seaborn">
-        <p>Seaborn</p>
-        </a>
-      </div>
-       <div class="slide">
-        <a href="Notes/numpy.pdf">
-         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/512px-NumPy_logo_2020.svg.png" alt="NumPy">
-        <p>NumPy</p>
-        </a>
-      </div>
-       <div class="slide">
-        <a href="Notes/pandas.pdf">
-        <img src="https://pandas.pydata.org/static/img/pandas_white.svg" alt="Pandas">
-        <p>Pandas</p>
-        </a>
-      </div>
+  <section id="about" class="about-section">
+    <div class="about-card">
+      <h2>About Notes Portal</h2>
+      <p>
+        <strong>Notes Portal</strong> is a simple and efficient semester-wise platform...
+      </p>
     </div>
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
+  </section>
+
+  <section class="slider-section">
+    <h2>📘 Other Course Notes</h2>
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide"><a href="Notes/python.pdf"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python"><p>Python</p></a></div>
+        <div class="slide"><a href="Notes/web-scraping.pdf"><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Web_scraping_with_Python_using_Beautiful_Soup.svg" alt="Web Scraping"><p>Web Scraping</p></a></div>
+        <div class="slide"><a href="Notes/matplotlib.pdf"><img src="https://matplotlib.org/stable/_static/logo2_compressed.svg" alt="Matplotlib"><p>Matplotlib</p></a></div>
+        <div class="slide"><a href="Notes/seaborn.pdf"><img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="Seaborn"><p>Seaborn</p></a></div>
+        <div class="slide"><a href="Notes/numpy.pdf"><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy"><p>NumPy</p></a></div>
+        <div class="slide"><a href="Notes/pandas.pdf"><img src="https://pandas.pydata.org/static/img/pandas_white.svg" alt="Pandas"><p>Pandas</p></a></div>
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com/hira_nawaz15" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://github.com/HiraNawaz2415/HiraNawaz2415/blob/main/README.md" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/hira-nawaz-544632348/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:nawazhira48@gmail.com"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.kaggle.com/hiranawaz2415" target="_blank"><i class="fab fa-kaggle"></i></a>
   </div>
-</section>
-
-
-
-    <section id="contact" class="contact-section">
-      <h2>Contact Us</h2>
-      <form class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="social-icons">
-       <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://instagram.com/hira_nawaz15" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/HiraNawaz2415/HiraNawaz2415/blob/main/README.md" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/hira-nawaz-544632348/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="nawazhira48@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.kaggle.com/hiranawaz2415" target="_blank"><i class="fab fa-kaggle"></i></a>
-        <a href="https://www.hackerrank.com/profile/nawazhira48" target="_blank"><i class="fab fa-hackerrank"></i></a>
-        <a href="https://stackoverflow.com/users/23370218/hira-nawaz" target="_blank"><i class="fab fa-stack-overflow"></i></a>
-        <a href="https://medium.com/@nawazhira48" target="_blank"><i class="fab fa-medium"></i></a>
-    </div>
-    <p>&copy; 2025 Notes Portal. All rights reserved.</p>
-  </footer>
+  <p>&copy; 2025 Notes Portal. All rights reserved.</p>
+</footer>
 
 <script>
-  // Wait for DOM to load
   document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
-
-    menuToggle.addEventListener('click', function () {
-      navLinks.classList.toggle('active');
-    });
-  });
-  document.addEventListener('DOMContentLoaded', function () {
-    // Mobile menu toggle (already present in your code)
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    menuToggle.addEventListener('click', function () {
-      navLinks.classList.toggle('active');
-    });
-
-    // Slider logic
     const slider = document.querySelector('.slider');
     const slides = document.querySelectorAll('.slide');
     const prevBtn = document.querySelector('.prev');
     const nextBtn = document.querySelector('.next');
+
+    menuToggle.addEventListener('click', function () {
+      navLinks.classList.toggle('active');
+    });
 
     let index = 0;
     const totalSlides = slides.length;
@@ -159,15 +107,9 @@
 
     prevBtn.addEventListener('click', () => showSlide(index - 1));
     nextBtn.addEventListener('click', () => showSlide(index + 1));
-
-    // Optional: Auto-slide every 6 seconds
-    setInterval(() => {
-      showSlide(index + 1);
-    }, 6000);
+    setInterval(() => showSlide(index + 1), 6000);
   });
-
 </script>
-
 
 </body>
 </html>
