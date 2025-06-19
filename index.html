@@ -49,6 +49,36 @@
   </div>
 </section>
 
+    <!-- Image Slider Section -->
+<section class="slider-section">
+  <h2>📘 Other Course Notes</h2>
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide">
+        <a href="notes/web_development.html">
+          <img src="images/web.jpg" alt="Web Development">
+          <p>Web Development</p>
+        </a>
+      </div>
+      <div class="slide">
+        <a href="notes/machine_learning.html">
+          <img src="images/ml.jpg" alt="Machine Learning">
+          <p>Machine Learning</p>
+        </a>
+      </div>
+      <div class="slide">
+        <a href="notes/cyber_security.html">
+          <img src="images/cyber.jpg" alt="Cyber Security">
+          <p>Cyber Security</p>
+        </a>
+      </div>
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+</section>
+
+
 
     <section id="contact" class="contact-section">
       <h2>Contact Us</h2>
@@ -81,6 +111,37 @@
       navLinks.classList.toggle('active');
     });
   });
+  document.addEventListener('DOMContentLoaded', function () {
+    // Mobile menu toggle (already present in your code)
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', function () {
+      navLinks.classList.toggle('active');
+    });
+
+    // Slider logic
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+
+    let index = 0;
+    const totalSlides = slides.length;
+
+    function showSlide(i) {
+      index = (i + totalSlides) % totalSlides;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    prevBtn.addEventListener('click', () => showSlide(index - 1));
+    nextBtn.addEventListener('click', () => showSlide(index + 1));
+
+    // Optional: Auto-slide every 6 seconds
+    setInterval(() => {
+      showSlide(index + 1);
+    }, 6000);
+  });
+
 </script>
 
 
