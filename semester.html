@@ -54,28 +54,27 @@
         { name: "Principles of Management", folder: "pom", files: ["book.pdf", "caseStudies.pdf"] },
         { name: "Pakistan Studies", folder: "pakstudy", files: ["book.pdf", "notes.pdf"] }
       ],
-   4: [
-  { name: "Database Systems", folder: "dbms", files: ["book.pdf", "queries.pdf"] },
-  { name: "Human Resource Management", folder: "hrm", files: ["book.pdf", "notes.pdf"] },
-  { name: "Software Engineering", folder: "se", files: ["book.pdf", "models.pdf"] },
-  { name: "Linear Algebra", folder: "algebra", files: ["book.pdf", "matrices.pdf"] },
-  {
-    name: "Design and Analysis of Algorithms",
-    folder: "DAA",
-    files: [
-      "non-comparison-sorting.pdf",
-      "recursion.pdf",
-      "redblack-tree.pdf",
-      "dynamic-programming.pdf",
-      "strassens-multiplication.pdf",
-      "greedy-algorithm.pdf",
-      "ford-fulkerson-algorithm.pdf",
-      "string-matching-algorithm.pdf",
-      "past-paper-questions.pdf"
-    ]
-  }
-],
-
+      4: [
+        { name: "Database Systems", folder: "dbms", files: ["book.pdf", "queries.pdf"] },
+        { name: "Human Resource Management", folder: "hrm", files: ["book.pdf", "notes.pdf"] },
+        { name: "Software Engineering", folder: "se", files: ["book.pdf", "models.pdf"] },
+        { name: "Linear Algebra", folder: "algebra", files: ["book.pdf", "matrices.pdf"] },
+        {
+          name: "Design and Analysis of Algorithms",
+          folder: "DAA",
+          files: [
+            "non-comparison-sorting.pdf",
+            "recursion.pdf",
+            "redblack-tree.pdf",
+            "dynamic-programming.pdf",
+            "strassens-multiplication.pdf",
+            "greedy-algorithm.pdf",
+            "ford-fulkerson-algorithm.pdf",
+            "string-matching-algorithm.pdf",
+            "past-paper-questions.pdf"
+          ]
+        }
+      ],
       5: [
         {
           name: "Web Development",
@@ -124,14 +123,16 @@
         {
           name: "Data Ware House",
           folder: "DWH",
-          files: ["ch3.pdf","ch5.pdf", "ch9.pdf", "ch10.pdf"]
+          files: ["ch3.pdf", "ch5.pdf", "ch9.pdf", "ch10.pdf"]
         },
         { name: "Financial Accounting", folder: "accounting", files: ["book.pdf", "statements.pdf"] }
       ]
     };
 
+    // ✅ FIXED: Convert sem to number
     const params = new URLSearchParams(window.location.search);
-    const sem = params.get('sem');
+    const sem = parseInt(params.get('sem'));
+
     const title = document.getElementById('semester-title');
     const container = document.getElementById('subjects-container');
     const gradientClasses = ['gradient-blue', 'gradient-teal', 'gradient-orange', 'gradient-pink'];
@@ -144,22 +145,20 @@
         const randomClass = gradientClasses[Math.floor(Math.random() * gradientClasses.length)];
 
         div.className = `subject ${randomClass}`;
-   div.innerHTML = `
-  <div class="subject-card">
-    <h3 class="subject-title">${subject.name}</h3>
-    <ul class="resource-list">
-      ${subject.files.map(file => `
-        <li>
-          <a href="Notes/SEM${sem}/${subject.folder}/${encodeURIComponent(file)}" class="resource-link" download>
-            📄 ${file}
-          </a>
-        </li>
-      `).join('')}
-    </ul>
-  </div>
-`;
-
-
+        div.innerHTML = `
+          <div class="subject-card">
+            <h3 class="subject-title">${subject.name}</h3>
+            <ul class="resource-list">
+              ${subject.files.map(file => `
+                <li>
+                  <a href="Notes/SEM${sem}/${subject.folder}/${encodeURIComponent(file)}" class="resource-link" download>
+                    📄 ${file}
+                  </a>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+        `;
         container.appendChild(div);
       });
     } else {
