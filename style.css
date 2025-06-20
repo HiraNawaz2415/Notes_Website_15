@@ -1,4 +1,4 @@
-/* ===== General Reset & Base Styles ===== */
+   /* ===== General Reset & Base Styles ===== */
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +23,7 @@ html {
     padding: 0 1rem;
   }
 }
+
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -118,6 +119,7 @@ body {
   box-shadow: 0 0 0 3px #87a96b66;
 }
 
+
 /* ===== About Section ===== */
 .about-section {
   padding: 3rem 1rem;
@@ -151,6 +153,7 @@ body {
   color: #555;
   line-height: 1.7;
 }
+
 
 /* ===== Subject Cards ===== */
 .subject-list {
@@ -351,9 +354,104 @@ body {
     width: 100%;
     padding: 0 10px;
   }
+ 
 }
 
-/* ===== Nav Social Icons ===== */
+/* Slider Section */
+.slider-section {
+  padding: 40px 20px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.slider-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Outer container for navigation buttons */
+.slider-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Inner slider */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each slide (card) */
+.slide {
+  flex: 0 0 auto;
+  width: 280px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  scroll-snap-align: center;
+  transition: transform 0.3s;
+}
+
+.slide:hover {
+  transform: scale(1.03);
+}
+
+.slide img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.slide p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+/* Navigation Buttons */
+.prev,
+.next {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 8px 12px;
+  z-index: 2;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+
+/* Ensure nav menu is hidden in mobile by default */
 .nav-links {
   display: none;
   flex-direction: column;
@@ -364,6 +462,7 @@ body {
   display: flex;
 }
 
+/* Style for social icons inside nav */
 .nav-links .social-icons {
   display: flex;
   justify-content: center;
