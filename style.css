@@ -316,7 +316,7 @@ body {
   }
 
   .nav-links {
-    display: none;
+    display: block;
     flex-direction: column;
     background-color: #006666;
     position: absolute;
@@ -452,7 +452,7 @@ body {
 
 /* Ensure nav menu is hidden in mobile by default */
 .nav-links {
-  display: none;
+  display:block;
   flex-direction: column;
   gap: 1rem;
 }
