@@ -311,12 +311,8 @@ body {
     flex: 1;
   }
 
-  .menu-toggle {
-    display: block;
-    font-size: 1.8rem;
-    color: white;
-    cursor: pointer;
-    margin-left: auto;
+ .menu-toggle {
+    display: none !important; /* Hide hamburger */
   }
 
   .nav-links {
@@ -348,6 +344,9 @@ body {
   .semester-link {
     font-size: 0.95rem;
     padding: 0.8rem 1.2rem;
+  }
+ .nav-links .social-icons {
+    display: none !important; /* Hide social icons in navbar on desktop */
   }
 
   .contact-form {
@@ -479,16 +478,36 @@ body {
   color: #00aced;
 }
 
-/* Desktop view */
-@media (min-width: 768px) {
+@media (max-width: 767px) {
+  .menu-toggle {
+    display: block; /* Show hamburger */
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
   .nav-links {
-    display: flex !important;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
+    display: none;
+    flex-direction: column;
+    background-color: #006666;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 
   .nav-links .social-icons {
-    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
   }
-}   
+}
+
+
