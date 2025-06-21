@@ -424,6 +424,10 @@ body {
     align-items: center;
     justify-content: space-between;
   }
+  .menu-toggle{
+  color: white !important;
+  display:block
+}
 
   .logo {
     flex: 1;
