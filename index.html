@@ -77,10 +77,15 @@
 
   <section id="contact" class="contact-section">
     <h2>Contact Us</h2>
-    <form class="contact-form">
+    <form 
+  action="https://formspree.io/f/meoklpzp"
+  method="POST"
+> class="contact-form">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+     <!-- Redirect after submit -->
+    <input type="hidden" name="_redirect" value="thankyou.html">
       <button type="submit">Send Message</button>
     </form>
   </section>
