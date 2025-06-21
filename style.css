@@ -418,7 +418,7 @@ body {
 
 /* ===== Responsive Fixes ===== */
 
-@media (max-width: 768x) {
+@media (max-width: 700x) {
   .container {
     flex-direction: row;
     align-items: center;
@@ -427,10 +427,6 @@ body {
 
   .logo {
     flex: 1;
-  }
-
-  .menu-toggle {
-    display:block;
   }
 
   .nav-links {
