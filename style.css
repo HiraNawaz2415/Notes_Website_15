@@ -312,11 +312,15 @@ body {
   }
 
   .menu-toggle {
-    display:none;
+    display: block;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
   }
 
   .nav-links {
-    display: block;
+    display: none;
     flex-direction: column;
     background-color: #006666;
     position: absolute;
@@ -335,12 +339,6 @@ body {
     padding: 1rem 0;
   }
 
-    .nav-links .social-icons {
-    margin-left:auto;
-  }
-}
-
-
   .main-content h2,
   .about-section h2,
   .contact-section h2 {
@@ -357,115 +355,29 @@ body {
     padding: 0 10px;
   }
  
-  }
-
-
-
-/* ===== Slider Section ===== */
-.slider-section {
-  padding: 2rem 1rem;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.slider-section h2 {
-  font-size: 2rem;
-  color: #008080;
-  margin-bottom: 1rem;
-}
-
-.slider-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 .slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: fit-content;
 }
 
 .slide {
-  min-width: 200px;
-  max-width: 200px;
-  margin: 0 10px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  padding: 1rem;
   flex-shrink: 0;
-  transition: transform 0.3s;
-}
-
-.slide:hover {
-  transform: scale(1.05);
+  width: 100%;
+  text-align: center;
 }
 
 .slide img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  margin-bottom: 10px;
+  width: 100%;
+  max-height: 250px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .slide p {
-  font-size: 1rem;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
   color: #333;
-}
-
-/* Slider navigation buttons */
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #008080;
-  color: white;
-  font-size: 2rem;
-  border: none;
-  border-radius: 50%;
-  padding: 8px 12px;
-  cursor: pointer;
-  z-index: 10;
-  transition: background 0.3s;
-}
-
-.prev:hover,
-.next:hover {
-  background: #005f5f;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .slide {
-    min-width: 150px;
-    max-width: 150px;
-    padding: 0.5rem;
-  }
-
-  .slide img {
-    width: 70px;
-    height: 70px;
-  }
-
-  .slider-section h2 {
-    font-size: 1.4rem;
-  }
-
-  .prev,
-  .next {
-    font-size: 1.5rem;
-    padding: 6px 10px;
-  }
 }
