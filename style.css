@@ -447,6 +447,7 @@ body {
   }
 
   .nav-links .social-icons {
+    display: flex;
     justify-content: center;
     gap: 10px;
   }
