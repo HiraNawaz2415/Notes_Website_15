@@ -316,7 +316,7 @@ body {
   }
 
   .nav-links {
-    display: none;
+    display: block;
     flex-direction: column;
     background-color: #006666;
     position: absolute;
