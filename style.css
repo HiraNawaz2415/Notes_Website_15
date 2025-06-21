@@ -18,10 +18,7 @@ html {
   .about-section h2 {
     font-size: 1.5rem;
   }
-  .menu-toggle{
-  color: white !important;
-  display:block
-}
+ 
   .about-section p {
     font-size: 1rem;
     padding: 0 1rem;
@@ -83,6 +80,9 @@ body {
   background: linear-gradient(135deg, #87a96b, #008b8b);
   color: white;
 }
+ .nav-links .social-icons {
+    display:none;
+  }
 
 /* ===== Main Content ===== */
 .main-content {
@@ -430,7 +430,7 @@ body {
   }
 
   .menu-toggle {
-    display:block;
+    display:none;
   }
 
   .nav-links {
