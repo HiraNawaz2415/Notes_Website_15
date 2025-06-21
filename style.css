@@ -10,8 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.menu-toggle,
-.menu-toggle * {
+.menu-toggle{
   color: white !important;
   display:none
 }
@@ -19,7 +18,10 @@ html {
   .about-section h2 {
     font-size: 1.5rem;
   }
-
+  .menu-toggle{
+  color: white !important;
+  display:block
+}
   .about-section p {
     font-size: 1rem;
     padding: 0 1rem;
