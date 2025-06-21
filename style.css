@@ -312,11 +312,7 @@ body {
   }
 
   .menu-toggle {
-    display: block;
-    font-size: 1.8rem;
-    color: white;
-    cursor: pointer;
-    margin-left: auto;
+    display: none;
   }
 
   .nav-links {
@@ -338,6 +334,12 @@ body {
     text-align: center;
     padding: 1rem 0;
   }
+
+    .nav-links .social-icons {
+    display:none;
+  }
+}
+
 
   .main-content h2,
   .about-section h2,
