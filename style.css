@@ -312,7 +312,7 @@ body {
   }
 
   .menu-toggle {
-    display:block;
+    display:none;
   }
 
   .nav-links {
