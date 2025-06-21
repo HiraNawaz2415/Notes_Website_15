@@ -480,4 +480,29 @@ body {
   }
  
   }
+/* Typewriter base styling */
+.typewriter {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-color); /* Adjusts to dark/light mode */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid var(--accent, #00bcd4); /* optional */
+}
+
+/* Animated blinking cursor */
+.cursor {
+  display: inline-block;
+  font-weight: bold;
+  color: var(--accent, #00bcd4);
+  animation: blink 0.8s infinite;
+}
+
+/* Blinking animation */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 
