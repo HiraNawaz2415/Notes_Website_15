@@ -416,7 +416,7 @@ body {
 
 /* ===== Responsive Fixes ===== */
 
-@media (max-width: 600px) {
+@media (max-width: 768x) {
   .container {
     flex-direction: row;
     align-items: center;
