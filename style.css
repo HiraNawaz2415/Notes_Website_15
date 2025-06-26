@@ -515,6 +515,10 @@ body {
 .github-link:hover {
   text-decoration: underline;
 }
+.subject-card p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 
 
