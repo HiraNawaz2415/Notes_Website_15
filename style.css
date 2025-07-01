@@ -523,13 +523,16 @@ body {
 }
 .streamlit-link {
   display: inline-block;
-  margin-top: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-decoration: none;
   color: #00c851; /* Streamlit green vibe */
   text-decoration: none;
 }
 
 .streamlit-link:hover {
   text-decoration: underline;
+   color: #00c851;
 }
 
 
